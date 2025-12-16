@@ -25,7 +25,7 @@ IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'HORARIOSTRABAJADOR' AND sc
 BEGIN
     CREATE TABLE HORARIOSTRABAJADOR (
         IdHorario INT IDENTITY(1,1) PRIMARY KEY,
-        diaSemana NVARCHAR(255) NOT NULL,
+        diaSemana INT NOT NULL,
         horaentrada TIME NOT NULL,
         HoraSalida TIME NOT NULL,
         IdUsuario INT NOT NULL

@@ -19,10 +19,10 @@ IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'PEDIDOS' AND schema_id = S
 BEGIN
     CREATE TABLE PEDIDOS (
         IdPedido INT IDENTITY(1,1) PRIMARY KEY,
-        fechacreacion DATETIME NOT NULL,
+        fechacreacion DATETIME NOT NULL DEFAULT GETDATE(),
         total DECIMAL(18,2) NOT NULL DEFAULT 0.00,
         IdUsuario INT NOT NULL,
-        IdMesa INT NOT NULL,
+        IdMesa INT DEFAULT NULL,
         IdEstado INT NOT NULL
     );
 END
