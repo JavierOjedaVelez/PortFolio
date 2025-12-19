@@ -18,5 +18,3 @@ GO
 :r .\Facturacion.sql;
 :r .\Relaciones.sql;
 :r .\Constraints.sql;
-
-

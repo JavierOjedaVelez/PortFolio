@@ -12,7 +12,7 @@ BEGIN
     CREATE TABLE PRODUCTOS (
         IdProducto INT IDENTITY(1,1) PRIMARY KEY,
         nombre NVARCHAR(255) NOT NULL,
-        descripcion NVARCHAR(MAX) DEFAULT NULL,
+        descripcion NVARCHAR(765) DEFAULT NULL,
         precio DECIMAL(18,2) NOT NULL DEFAULT 0.00,
         imagenURL NVARCHAR(255) DEFAULT NULL,
         IdCategoriaProducto INT NOT NULL
@@ -24,7 +24,7 @@ BEGIN
     CREATE TABLE INGREDIENTES (
         IdIngrediente INT IDENTITY(1,1) PRIMARY KEY,
         nombre NVARCHAR(255) NOT NULL,
-        descripcion NVARCHAR(MAX) NOT NULL,
+        descripcion NVARCHAR(765) DEFAULT NULL,
         IdProveedor INT NOT NULL
     );
 END
@@ -52,7 +52,7 @@ BEGIN
     CREATE TABLE PROMOCIONES (
         IdPromocion INT IDENTITY(1,1) PRIMARY KEY,
         nombre NVARCHAR(255) NOT NULL,
-        descripcion NVARCHAR(MAX) DEFAULT NULL,
+        descripcion NVARCHAR(765) DEFAULT NULL,
         IdTipo INT NOT NULL,
         valor DECIMAL(18,2) NOT NULL,
         fechainicio DATETIME NOT NULL,

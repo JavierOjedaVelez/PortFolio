@@ -178,3 +178,255 @@ BEGIN
     ADD CONSTRAINT CK_EstadoReservas_Nombre
     CHECK (LEN(nombre) > 0 AND LEN(nombre) <= 255);
 END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_CategoriaProductos_Nombre')
+BEGIN
+    ALTER TABLE CATEGORIAPRODUCTOS
+    ADD CONSTRAINT CK_CategoriaProductos_Nombre
+    CHECK (LEN(nombre) > 0 AND LEN(nombre) <= 255);
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Producto_Nombre')
+BEGIN
+    ALTER TABLE PRODUCTOS
+    ADD CONSTRAINT CK_Producto_Nombre
+    CHECK (LEN(nombre) > 0 AND LEN(nombre) <= 255);
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Producto_Descripcion')
+BEGIN
+    ALTER TABLE PRODUCTOS
+    ADD CONSTRAINT CK_Producto_Descripcion
+    CHECK (LEN(nombre) <= 765);
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Producto_Precio')
+BEGIN
+    ALTER TABLE PRODUCTOS
+    ADD CONSTRAINT CK_Producto_Precio
+    CHECK (precio > 0);
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Producto_imagenURL')
+BEGIN
+    ALTER TABLE PRODUCTOS
+    ADD CONSTRAINT CK_Producto_imagenURL
+    CHECK (
+    imagenURL IS NULL
+    OR LTRIM(RTRIM(imagenURL)) <> ''
+);
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Ingrediente_Nombre')
+BEGIN
+    ALTER TABLE INGREDIENTES
+    ADD CONSTRAINT CK_Ingrediente_Nombre
+    CHECK (LEN(nombre) > 0 AND LEN(nombre) <= 255);
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Ingrediente_Descripcion')
+BEGIN
+    ALTER TABLE INGREDIENTES
+    ADD CONSTRAINT CK_Ingrediente_Descripcion
+    CHECK (LEN(nombre) <= 765);
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_ProductosIngredientes_Cantidad')
+BEGIN
+    ALTER TABLE PRODUCTOSINGREDIENTES
+    ADD CONSTRAINT CK_ProductosIngredientes_Cantidad
+    CHECK (Cantidad > 0);
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_TipoPromocion_Nombre')
+BEGIN
+    ALTER TABLE TIPOPROMOCION
+    ADD CONSTRAINT CK_TipoPromocion_Nombre
+    CHECK (
+        LEN(nombre) <= 255
+        AND LTRIM(RTRIM(nombre)) <> ''
+    );
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Promociones_Nombre')
+BEGIN
+    ALTER TABLE PROMOCIONES
+    ADD CONSTRAINT CK_Promociones_Nombre
+    CHECK (
+        LEN(nombre) <= 255
+        AND LTRIM(RTRIM(nombre)) <> ''
+    );
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Promociones_Descripcion')
+BEGIN
+    ALTER TABLE PROMOCIONES
+    ADD CONSTRAINT CK_Promociones_Descripcion
+    CHECK (
+        descripcion IS NULL
+        OR LEN(descripcion) <= 765
+    );
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Promociones_Valor')
+BEGIN
+    ALTER TABLE PROMOCIONES
+    ADD CONSTRAINT CK_Promociones_Valor
+    CHECK (valor > 0);
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Promociones_Fechas')
+BEGIN
+    ALTER TABLE PROMOCIONES
+    ADD CONSTRAINT CK_Promociones_Fechas
+    CHECK (Fechafin >= Fechainicio);
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Promociones_Activo')
+BEGIN
+    ALTER TABLE PROMOCIONES
+    ADD CONSTRAINT CK_Promociones_Activo
+    CHECK (activo IN (0,1));
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Proveedores_Nombre')
+BEGIN
+    ALTER TABLE PROVEEDORES
+    ADD CONSTRAINT CK_Proveedores_Nombre
+    CHECK (
+        LEN(nombre) <= 255
+        AND LTRIM(RTRIM(nombre)) <> ''
+    );
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Proveedores_Contacto')
+BEGIN
+    ALTER TABLE PROVEEDORES
+    ADD CONSTRAINT CK_Proveedores_Contacto
+    CHECK (
+        LEN(contacto) <= 255
+        AND LTRIM(RTRIM(contacto)) <> ''
+    );
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Proveedores_Telefono')
+BEGIN
+    ALTER TABLE PROVEEDORES
+    ADD CONSTRAINT CK_Proveedores_Telefono
+    CHECK (
+        telefono IS NULL
+        OR (
+            LEN(telefono) <= 20
+            AND LTRIM(RTRIM(telefono)) <> ''
+        )
+    );
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Proveedores_Email')
+BEGIN
+    ALTER TABLE PROVEEDORES
+    ADD CONSTRAINT CK_Proveedores_Email
+    CHECK (
+        LEN(email) <= 255
+        AND LTRIM(RTRIM(email)) <> ''
+        AND email LIKE '%@%.%'
+    );
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Inventario_CantidadDisponible')
+BEGIN
+    ALTER TABLE INVENTARIO
+    ADD CONSTRAINT CK_Inventario_CantidadDisponible
+    CHECK (cantidaddisponible >= 0);
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_ObjetoTipo_Nombre')
+BEGIN
+    ALTER TABLE OBJETOTIPO
+    ADD CONSTRAINT CK_ObjetoTipo_Nombre
+    CHECK (
+        LEN(nombre) <= 255
+        AND LTRIM(RTRIM(nombre)) <> ''
+    );
+END
+
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Historico_Accion')
+BEGIN
+    ALTER TABLE HISTORICO
+    ADD CONSTRAINT CK_Historico_Accion
+    CHECK (
+        LEN(accion) <= 255
+        AND LTRIM(RTRIM(accion)) <> ''
+    );
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Historico_Descripcion')
+BEGIN
+    ALTER TABLE HISTORICO
+    ADD CONSTRAINT CK_Historico_Descripcion
+    CHECK (
+        LEN(descripcion) <= 765
+        AND LTRIM(RTRIM(descripcion)) <> ''
+    );
+END
+
+
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Logs_Accion')
+BEGIN
+    ALTER TABLE LOGS
+    ADD CONSTRAINT CK_Logs_Accion
+    CHECK (
+        LEN(accion) <= 255
+        AND LTRIM(RTRIM(accion)) <> ''
+    );
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Logs_TablaAfectada')
+BEGIN
+    ALTER TABLE LOGS
+    ADD CONSTRAINT CK_Logs_TablaAfectada
+    CHECK (
+        LEN(tablaafectada) <= 255
+        AND LTRIM(RTRIM(tablaafectada)) <> ''
+    );
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Logs_Descripcion')
+BEGIN
+    ALTER TABLE LOGS
+    ADD CONSTRAINT CK_Logs_Descripcion
+    CHECK (
+        LEN(descripcion) <= 765
+        AND LTRIM(RTRIM(descripcion)) <> ''
+    );
+END
+
+
+
+
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Calificaciones_Puntuacion')
+BEGIN
+    ALTER TABLE CALIFICACIONES
+    ADD CONSTRAINT CK_Calificaciones_Puntuacion
+    CHECK (puntuacion >= 0 AND puntuacion <= 10);
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Calificaciones_Comentario')
+BEGIN
+    ALTER TABLE CALIFICACIONES
+    ADD CONSTRAINT CK_Calificaciones_Comentario
+    CHECK (
+        LEN(comentario) <= 255
+        AND LTRIM(RTRIM(comentario)) <> ''
+    );
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Calificaciones_Fecha')
+BEGIN
+    ALTER TABLE CALIFICACIONES
+    ADD CONSTRAINT CK_Calificaciones_Fecha
+    CHECK (fecha <= GETDATE());
+END

@@ -16,7 +16,7 @@ BEGIN
         IdTipoObjeto INT NOT NULL,
         accion NVARCHAR(255) NOT NULL,
         fecha DATETIME NOT NULL,
-        descripcion NVARCHAR(255) NOT NULL
+        descripcion NVARCHAR(765) NOT NULL
     );
 END
 
@@ -27,7 +27,7 @@ BEGIN
         accion NVARCHAR(255) NOT NULL,
         tablaafectada NVARCHAR(255) NOT NULL,
         fecha DATETIME NOT NULL,
-        descripcion NVARCHAR(255) NOT NULL,
+        descripcion NVARCHAR(765) NOT NULL,
         IdUsuario INT NOT NULL
     );
 END
