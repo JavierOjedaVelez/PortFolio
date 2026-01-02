@@ -1,0 +1,123 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ja130\\Desktop\\Mi_Proyecto\\PortFolio\\Proyecto\\Restaurante\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|c:\\users\\ja130\\desktop\\mi_proyecto\\portfolio\\proyecto\\restaurante\\controllers\\restaurantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|solutionrelative:controllers\\restaurantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|c:\\users\\ja130\\desktop\\mi_proyecto\\portfolio\\proyecto\\restaurante\\dtos\\restaurantes\\restauranteupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|solutionrelative:dtos\\restaurantes\\restauranteupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|c:\\users\\ja130\\desktop\\mi_proyecto\\portfolio\\proyecto\\restaurante\\dtos\\restaurantes\\restaurantesresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|solutionrelative:dtos\\restaurantes\\restaurantesresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|c:\\users\\ja130\\desktop\\mi_proyecto\\portfolio\\proyecto\\restaurante\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|solutionrelative:controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|c:\\users\\ja130\\desktop\\mi_proyecto\\portfolio\\proyecto\\restaurante\\models\\restaurantes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|solutionrelative:models\\restaurantes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|c:\\users\\ja130\\desktop\\mi_proyecto\\portfolio\\proyecto\\restaurante\\models\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|solutionrelative:models\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Roles.cs",
+              "DocumentMoniker": "C:\\Users\\ja130\\Desktop\\Mi_Proyecto\\PortFolio\\Proyecto\\Restaurante\\Models\\Roles.cs",
+              "RelativeDocumentMoniker": "Models\\Roles.cs",
+              "ToolTip": "C:\\Users\\ja130\\Desktop\\Mi_Proyecto\\PortFolio\\Proyecto\\Restaurante\\Models\\Roles.cs",
+              "RelativeToolTip": "Models\\Roles.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T11:54:06.534Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RestauranteUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\ja130\\Desktop\\Mi_Proyecto\\PortFolio\\Proyecto\\Restaurante\\Dtos\\Restaurantes\\RestauranteUpdateDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Restaurantes\\RestauranteUpdateDto.cs",
+              "ToolTip": "C:\\Users\\ja130\\Desktop\\Mi_Proyecto\\PortFolio\\Proyecto\\Restaurante\\Dtos\\Restaurantes\\RestauranteUpdateDto.cs",
+              "RelativeToolTip": "Dtos\\Restaurantes\\RestauranteUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T17:10:17.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RestaurantesResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\ja130\\Desktop\\Mi_Proyecto\\PortFolio\\Proyecto\\Restaurante\\Dtos\\Restaurantes\\RestaurantesResponseDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Restaurantes\\RestaurantesResponseDto.cs",
+              "ToolTip": "C:\\Users\\ja130\\Desktop\\Mi_Proyecto\\PortFolio\\Proyecto\\Restaurante\\Dtos\\Restaurantes\\RestaurantesResponseDto.cs",
+              "RelativeToolTip": "Dtos\\Restaurantes\\RestaurantesResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T16:58:10.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RolesController.cs",
+              "DocumentMoniker": "C:\\Users\\ja130\\Desktop\\Mi_Proyecto\\PortFolio\\Proyecto\\Restaurante\\Controllers\\RolesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RolesController.cs",
+              "ToolTip": "C:\\Users\\ja130\\Desktop\\Mi_Proyecto\\PortFolio\\Proyecto\\Restaurante\\Controllers\\RolesController.cs",
+              "RelativeToolTip": "Controllers\\RolesController.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAowHAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T16:53:07.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RestaurantesController.cs",
+              "DocumentMoniker": "C:\\Users\\ja130\\Desktop\\Mi_Proyecto\\PortFolio\\Proyecto\\Restaurante\\Controllers\\RestaurantesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RestaurantesController.cs",
+              "ToolTip": "C:\\Users\\ja130\\Desktop\\Mi_Proyecto\\PortFolio\\Proyecto\\Restaurante\\Controllers\\RestaurantesController.cs",
+              "RelativeToolTip": "Controllers\\RestaurantesController.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAkwHkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T16:52:59.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Restaurantes.cs",
+              "DocumentMoniker": "C:\\Users\\ja130\\Desktop\\Mi_Proyecto\\PortFolio\\Proyecto\\Restaurante\\Models\\Restaurantes.cs",
+              "RelativeDocumentMoniker": "Models\\Restaurantes.cs",
+              "ToolTip": "C:\\Users\\ja130\\Desktop\\Mi_Proyecto\\PortFolio\\Proyecto\\Restaurante\\Models\\Restaurantes.cs",
+              "RelativeToolTip": "Models\\Restaurantes.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T12:33:53.455Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

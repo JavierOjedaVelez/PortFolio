@@ -1,4 +1,4 @@
--- Modulo RRHH
+
 IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'TIPOFICHAJE' AND schema_id = SCHEMA_ID('dbo'))
 BEGIN
     CREATE TABLE TIPOFICHAJE (
@@ -22,7 +22,7 @@ IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'NOMINAS' AND schema_id = S
 BEGIN
     CREATE TABLE NOMINAS (
         IdNomina INT IDENTITY(1,1) PRIMARY KEY,
-        mes NVARCHAR(20) NOT NULL,
+        mes INT NOT NULL,
         año INT NOT NULL,
         salariobase DECIMAL(10,2) NOT NULL DEFAULT 0.00,
         bonos NVARCHAR(255) DEFAULT NULL,

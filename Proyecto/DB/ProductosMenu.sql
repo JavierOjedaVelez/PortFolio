@@ -15,7 +15,8 @@ BEGIN
         descripcion NVARCHAR(765) DEFAULT NULL,
         precio DECIMAL(18,2) NOT NULL DEFAULT 0.00,
         imagenURL NVARCHAR(255) DEFAULT NULL,
-        IdCategoriaProducto INT NOT NULL
+        IdCategoriaProducto INT NOT NULL,
+        IdPromocion INT DEFAULT NULL
     );
 END
 

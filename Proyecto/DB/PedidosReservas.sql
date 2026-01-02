@@ -1,11 +1,4 @@
--- Modulo Pedidos y Reservas
-IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'CATEGORIAPEDIDOS' AND schema_id = SCHEMA_ID('dbo'))
-BEGIN
-    CREATE TABLE CATEGORIAPEDIDOS (
-        IdCategoria INT IDENTITY(1,1) PRIMARY KEY,
-        nombre NVARCHAR(255) NOT NULL
-    );
-END
+
 
 IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'ESTADOPEDIDO' AND schema_id = SCHEMA_ID('dbo'))
 BEGIN

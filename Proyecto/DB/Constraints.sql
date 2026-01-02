@@ -136,13 +136,6 @@ END
 
 --CHECKS  PEDIDOS Y RESERVAS
 
-IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_CategoriasPedidos_Nombre')
-BEGIN
-    ALTER TABLE CATEGORIAPEDIDOS
-    ADD CONSTRAINT CK_CategoriasPedidos_Nombre
-    CHECK (LEN(nombre) > 0 AND LEN(nombre) <= 255);
-END
-
 
 IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_EstadoPedidos_Nombre')
 BEGIN
@@ -430,3 +423,87 @@ BEGIN
     ADD CONSTRAINT CK_Calificaciones_Fecha
     CHECK (fecha <= GETDATE());
 END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_TipoFichaje_Nombre')
+BEGIN
+    ALTER TABLE TIPOFICHAJE
+    ADD CONSTRAINT CK_TipoFichaje_Nombre
+    CHECK (
+        LEN(nombre) <= 255
+        AND LTRIM(RTRIM(nombre)) <> ''
+    );
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_Fichaje_Fechas')
+BEGIN
+    ALTER TABLE FICHAJE
+    ADD CONSTRAINT CK_Fichaje_Fechas
+    CHECK (fechaHoraEntrada < fechahorasalida);
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_NOMINAS_Mes')
+BEGIN
+    ALTER TABLE NOMINAS
+    ADD CONSTRAINT CK_NOMINAS_Mes CHECK (mes BETWEEN 1 AND 12);
+END
+GO
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_NOMINAS_Año')
+BEGIN
+    ALTER TABLE NOMINAS
+    ADD CONSTRAINT CK_NOMINAS_Año CHECK (año >= 1900);
+END
+GO
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_NOMINAS_Salarios')
+BEGIN
+    ALTER TABLE NOMINAS
+    ADD CONSTRAINT CK_NOMINAS_Salarios CHECK (
+        salariobase >= 0 AND deducciones >= 0 AND total >= 0
+    );
+END
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_METODOSPAGOS_Nombre')
+BEGIN
+    ALTER TABLE METODOSPAGOS
+    ADD CONSTRAINT CK_METODOSPAGOS_Nombre CHECK (LEN(nombre) > 0);
+END
+GO
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_ESTADOPAGO_Nombre')
+BEGIN
+    ALTER TABLE ESTADOPAGO
+    ADD CONSTRAINT CK_ESTADOPAGO_Nombre CHECK (LEN(nombre) > 0);
+END
+GO
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_PAGOS_Monto')
+BEGIN
+    ALTER TABLE PAGOS
+    ADD CONSTRAINT CK_PAGOS_Monto CHECK (monto >= 0);
+END
+GO
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_TIPOIMPUESTO_Porcentaje')
+BEGIN
+    ALTER TABLE TIPOIMPUESTO
+    ADD CONSTRAINT CK_TIPOIMPUESTO_Porcentaje CHECK (porcentaje >= 0 AND porcentaje <= 100);
+END
+GO
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_TIPOIMPUESTO_Nombre')
+BEGIN
+    ALTER TABLE TIPOIMPUESTO
+    ADD CONSTRAINT CK_TIPOIMPUESTO_Nombre CHECK (LEN(nombre) > 0);
+END
+GO
+
+
+IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_FACTURAS_Totales')
+BEGIN
+    ALTER TABLE FACTURAS
+    ADD CONSTRAINT CK_FACTURAS_Totales CHECK (totalbruto >= 0 AND totalretenido >= 0);
+END
+GO
+
+

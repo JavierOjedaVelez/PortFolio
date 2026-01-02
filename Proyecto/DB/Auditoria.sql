@@ -12,7 +12,6 @@ IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'HISTORICO' AND schema_id =
 BEGIN
     CREATE TABLE HISTORICO (
         IdHistorico INT IDENTITY(1,1) PRIMARY KEY,
-        IdObjeto INT NOT NULL,
         IdTipoObjeto INT NOT NULL,
         accion NVARCHAR(255) NOT NULL,
         fecha DATETIME NOT NULL,
