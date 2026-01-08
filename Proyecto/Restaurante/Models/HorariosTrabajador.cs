@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Restaurante.Models
 {
     [Table("HORARIOSTRABAJADOR")]
-    public class HorariosTrabajadorcs
+    public class HorariosTrabajador
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

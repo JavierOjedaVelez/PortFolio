@@ -14,6 +14,15 @@ namespace Restaurante.Data
         public DbSet<Roles> Roles { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<Restaurantes> Restaurantes { get; set; }
+        public DbSet<Mesas> Mesas { get; set; }
+        public DbSet<HorariosTrabajador> Horarios { get; set; }
+        public DbSet<EstadoPedido> EstadosPedidos { get; set; }
+        public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<DetallesPedidos> DetallesPedidos { get; set; }
+        public DbSet<CategoriasProcuctos> CategoriasProcuctos { get; set; }
+        public DbSet<EstadosReservas> EstadosReservas { get; set; }
+        public DbSet<Reservas> Reservas { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -22,6 +31,8 @@ namespace Restaurante.Data
             modelBuilder.Entity<Usuarios>()
                 .HasIndex(u => u.Email)
                 .IsUnique();
+            modelBuilder.Entity<DetallesPedidos>()
+         .HasKey(dp => new { dp.IdProducto, dp.IdPedido });
         }
     }
 }

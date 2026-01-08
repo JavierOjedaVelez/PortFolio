@@ -1,10 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ja130\\Desktop\\Mi_Proyecto\\PortFolio\\Proyecto\\Restaurante\\",
+  "WorkspaceRootPath": "C:\\Users\\JAVI\\Desktop\\Nueva carpeta (6)\\PortFolio\\Proyecto\\Restaurante\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|c:\\users\\ja130\\desktop\\mi_proyecto\\portfolio\\proyecto\\restaurante\\controllers\\mesascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|solutionrelative:controllers\\mesascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|c:\\users\\javi\\desktop\\nueva carpeta (6)\\portfolio\\proyecto\\restaurante\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|c:\\users\\javi\\desktop\\nueva carpeta (6)\\portfolio\\proyecto\\restaurante\\data\\appdbcontextcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|solutionrelative:data\\appdbcontextcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|c:\\users\\javi\\desktop\\nueva carpeta (6)\\portfolio\\proyecto\\restaurante\\migrations\\appdbcontextcsmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|solutionrelative:migrations\\appdbcontextcsmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|c:\\users\\javi\\desktop\\nueva carpeta (6)\\portfolio\\proyecto\\restaurante\\migrations\\20260108142324_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2098E6F0-21A8-4D2D-B569-1FEEBABA681A}|Restaurante.csproj|solutionrelative:migrations\\20260108142324_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +26,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MesasController.cs",
-              "DocumentMoniker": "C:\\Users\\ja130\\Desktop\\Mi_Proyecto\\PortFolio\\Proyecto\\Restaurante\\Controllers\\MesasController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MesasController.cs",
-              "ToolTip": "C:\\Users\\ja130\\Desktop\\Mi_Proyecto\\PortFolio\\Proyecto\\Restaurante\\Controllers\\MesasController.cs",
-              "RelativeToolTip": "Controllers\\MesasController.cs",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\JAVI\\Desktop\\Nueva carpeta (6)\\PortFolio\\Proyecto\\Restaurante\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\JAVI\\Desktop\\Nueva carpeta (6)\\PortFolio\\Proyecto\\Restaurante\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-08T14:30:05.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppDBContextcs.cs",
+              "DocumentMoniker": "C:\\Users\\JAVI\\Desktop\\Nueva carpeta (6)\\PortFolio\\Proyecto\\Restaurante\\Data\\AppDBContextcs.cs",
+              "RelativeDocumentMoniker": "Data\\AppDBContextcs.cs",
+              "ToolTip": "C:\\Users\\JAVI\\Desktop\\Nueva carpeta (6)\\PortFolio\\Proyecto\\Restaurante\\Data\\AppDBContextcs.cs",
+              "RelativeToolTip": "Data\\AppDBContextcs.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T14:29:56.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDBContextcsModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\JAVI\\Desktop\\Nueva carpeta (6)\\PortFolio\\Proyecto\\Restaurante\\Migrations\\AppDBContextcsModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Migrations\\AppDBContextcsModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\JAVI\\Desktop\\Nueva carpeta (6)\\PortFolio\\Proyecto\\Restaurante\\Migrations\\AppDBContextcsModelSnapshot.cs",
+              "RelativeToolTip": "Migrations\\AppDBContextcsModelSnapshot.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T17:19:05.633Z",
+              "WhenOpened": "2026-01-08T14:29:51.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20260108142324_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\JAVI\\Desktop\\Nueva carpeta (6)\\PortFolio\\Proyecto\\Restaurante\\Migrations\\20260108142324_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260108142324_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\JAVI\\Desktop\\Nueva carpeta (6)\\PortFolio\\Proyecto\\Restaurante\\Migrations\\20260108142324_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20260108142324_InitialCreate.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T14:23:24.866Z",
               "EditorCaption": ""
             }
           ]
