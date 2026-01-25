@@ -22,6 +22,6 @@ namespace Restaurante.Models
         //Ha momento de hacer esto, no existe el modelo de proveedor
         [Required]
         [Column(TypeName = "int")]
-        public string IdProveedor { get; set; } = string.Empty;
+        public int IdProveedor { get; set; }
     }
 }

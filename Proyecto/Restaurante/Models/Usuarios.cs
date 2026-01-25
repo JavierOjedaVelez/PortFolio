@@ -42,7 +42,7 @@ namespace Restaurante.Models
         [ForeignKey(nameof(IdRol))]
         public Roles Rol { get; set; } = null!;
 
-        public ICollection<HorariosTrabajadorcs> Horario { get; set; } = new List<HorariosTrabajadorcs>();
+        public ICollection<HorariosTrabajador> Horario { get; set; } = new List<HorariosTrabajador>();
 
     }
 }

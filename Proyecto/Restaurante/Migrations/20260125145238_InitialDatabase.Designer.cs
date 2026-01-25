@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Restaurante.Data;
 
@@ -11,9 +12,11 @@ using Restaurante.Data;
 namespace Restaurante.Migrations
 {
     [DbContext(typeof(AppDBContextcs))]
-    partial class AppDBContextcsModelSnapshot : ModelSnapshot
+    [Migration("20260125145238_InitialDatabase")]
+    partial class InitialDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -241,62 +244,6 @@ namespace Restaurante.Migrations
                     b.ToTable("PRODUCTOS");
                 });
 
-            modelBuilder.Entity("Restaurante.Models.ProductosIngredientes", b =>
-                {
-                    b.Property<int>("IdProducto")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdIngrediente")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("Cantidad")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("IdProducto", "IdIngrediente");
-
-                    b.HasIndex("IdIngrediente");
-
-                    b.ToTable("PRODUCTOSINGREDIENTES");
-                });
-
-            modelBuilder.Entity("Restaurante.Models.Promociones", b =>
-                {
-                    b.Property<int>("IdPromocion")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdPromocion"));
-
-                    b.Property<bool>("Activo")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Descripcion")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(765)");
-
-                    b.Property<DateTime>("FechaCaducidad")
-                        .HasColumnType("datetime");
-
-                    b.Property<DateTime>("FechaInicio")
-                        .HasColumnType("datetime");
-
-                    b.Property<int>("IdTipo")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Nombre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<decimal>("Valor")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("IdPromocion");
-
-                    b.HasIndex("IdTipo");
-
-                    b.ToTable("PROMOCIONES");
-                });
-
             modelBuilder.Entity("Restaurante.Models.Reservas", b =>
                 {
                     b.Property<int>("IdPedido")
@@ -371,23 +318,6 @@ namespace Restaurante.Migrations
                     b.HasKey("IdRol");
 
                     b.ToTable("ROLES");
-                });
-
-            modelBuilder.Entity("Restaurante.Models.TiposPromocion", b =>
-                {
-                    b.Property<int>("IdTipo")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdTipo"));
-
-                    b.Property<string>("nombre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(255)");
-
-                    b.HasKey("IdTipo");
-
-                    b.ToTable("TIPOSPROMOCIONES");
                 });
 
             modelBuilder.Entity("Restaurante.Models.Usuarios", b =>
@@ -493,36 +423,6 @@ namespace Restaurante.Migrations
                         .IsRequired();
 
                     b.Navigation("Categorias");
-                });
-
-            modelBuilder.Entity("Restaurante.Models.ProductosIngredientes", b =>
-                {
-                    b.HasOne("Restaurante.Models.Ingredientes", "Ingredientes")
-                        .WithMany()
-                        .HasForeignKey("IdIngrediente")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Restaurante.Models.Productos", "Productos")
-                        .WithMany()
-                        .HasForeignKey("IdProducto")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Ingredientes");
-
-                    b.Navigation("Productos");
-                });
-
-            modelBuilder.Entity("Restaurante.Models.Promociones", b =>
-                {
-                    b.HasOne("Restaurante.Models.TiposPromocion", "Tipo")
-                        .WithMany()
-                        .HasForeignKey("IdTipo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Tipo");
                 });
 
             modelBuilder.Entity("Restaurante.Models.Reservas", b =>

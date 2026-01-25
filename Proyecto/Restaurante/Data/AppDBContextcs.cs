@@ -11,17 +11,22 @@ namespace Restaurante.Data
 
         }
 
-        public DbSet<Roles> Roles { get; set; }
-        public DbSet<Usuarios> Usuarios { get; set; }
-        public DbSet<Restaurantes> Restaurantes { get; set; }
-        public DbSet<Mesas> Mesas { get; set; }
-        public DbSet<HorariosTrabajador> Horarios { get; set; }
-        public DbSet<EstadoPedido> EstadosPedidos { get; set; }
+        public DbSet<Roles> Roles { get; set; } //esta
+        public DbSet<Usuarios> Usuarios { get; set; } //esta
+        public DbSet<Restaurantes> Restaurantes { get; set; } //esta
+        public DbSet<Mesas> Mesas { get; set; } //está
+        public DbSet<HorariosTrabajador> Horarios { get; set; } //está
+        public DbSet<EstadoPedido> EstadosPedidos { get; set; } //está
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<DetallesPedidos> DetallesPedidos { get; set; }
         public DbSet<CategoriasProcuctos> CategoriasProcuctos { get; set; }
         public DbSet<EstadosReservas> EstadosReservas { get; set; }
         public DbSet<Reservas> Reservas { get; set; }
+        public DbSet<Ingredientes> Ingredientes { get; set; }
+        public DbSet<Productos> Productos { get; set; }
+        public DbSet<ProductosIngredientes> ProductosIngredientes { get; set; }
+        public DbSet<TiposPromocion> TiposPromocion { get; set; }
+        public DbSet<Promociones> Promociones { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -33,6 +38,9 @@ namespace Restaurante.Data
                 .IsUnique();
             modelBuilder.Entity<DetallesPedidos>()
          .HasKey(dp => new { dp.IdProducto, dp.IdPedido });
+            modelBuilder.Entity<ProductosIngredientes>()
+    .HasKey(pi => new { pi.IdProducto, pi.IdIngrediente });
+
         }
     }
 }
